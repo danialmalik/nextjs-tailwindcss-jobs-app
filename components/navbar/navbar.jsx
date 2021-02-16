@@ -9,9 +9,9 @@ import MaxWidthContainer from "../containers/max-width-container";
 const Navbar = () => {
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between navbar-expand-lg bg-gray-50 mb-3 h-24">
+      <nav className="relative flex flex-wrap items-center navbar-expand-lg bg-gray-50 mb-3 h-24">
         <MaxWidthContainer>
-          <div className="flex flex-wrap items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between w-full">
             <NavLogo />
             <div className="container-fluid flex flex-wrap items-center justify-between gap-10">
               <NavLink label="Profile" />
