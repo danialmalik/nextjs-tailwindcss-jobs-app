@@ -1,9 +1,9 @@
 import React from "react";
 
 import PrimaryButton from "../buttons/primary-button";
-import ProfileButton from "../profile-button";
-import NavLogo from "../nav-logo";
-import NavLink from "../nav-link";
+import ProfileButton from "./profile-button";
+import NavLogo from "./nav-logo";
+import NavLink from "./nav-link";
 import MaxWidthContainer from "../containers/max-width-container";
 
 const Navbar = () => {
