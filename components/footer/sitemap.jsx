@@ -8,8 +8,8 @@ const Sitemap = () => {
       <div className="text text-2xl font-bold my-2">Sitemap</div>
       {["Nurses", "Employers", "Social networking", "Jobs"].map(
         (label, idx) => (
-          <Link href="#">
-            <a className="my-1" >{label}</a>
+          <Link key={idx} href="#">
+            <a className="my-1">{label}</a>
           </Link>
         )
       )}
