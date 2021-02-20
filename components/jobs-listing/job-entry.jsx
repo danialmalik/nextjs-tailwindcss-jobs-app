@@ -1,9 +1,21 @@
 import React, { useState } from "react";
+import moment from "moment";
 
 import PrimaryButton from "../buttons/primary-button";
 import SecondaryButton from "../buttons/secondary-button";
 
-const JobEntry = () => {
+const JobEntry = ({
+  job: {
+    title,
+    jobType,
+    salaryRange,
+    address,
+    createdAt,
+    departments,
+    shifts,
+    summary,
+  },
+}) => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -13,36 +25,39 @@ const JobEntry = () => {
         onClick={() => setShowDetails(!showDetails)}
       >
         <div className="my-4 flex-col w-full">
-          <div className="text text-m font-bold">RN Outpatient Surgery</div>
+          <div className="text text-m font-bold">{title}</div>
           <div className="text">
-            Full time | $19.5 - $37.6 an hour | Village, CA
+            {jobType} | ${salaryRange.start} - ${salaryRange.end} an hour |{" "}
+            {address.city}
           </div>
         </div>
-        <div className="w-full text-right text">3 Weeks ago</div>
+        <div className="w-full text-right text">
+          {moment(createdAt).fromNow()}
+        </div>
       </div>
       {/* Job Details */}
       {showDetails && (
         <div>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-4 mb-5">
             {/* Job description */}
             <div className="flex flex-col col-span-3 gap-5">
               <div className="grid grid-cols-2">
                 <div className="text text-m font-bold">Department:</div>
-                <p className="text">Department</p>
+                <p className="text">{departments.join(", ")}</p>
               </div>
               <div className="grid grid-cols-2">
-                <div className="text text-m font-bold">Hours / shift:</div>
-                <p className="text">Day</p>
+                <div className="text text-m font-bold">Hours / shifts:</div>
+                <p className="text">
+                  {shifts.map((shift, idx) => (
+                    <span key={idx}>
+                      {shift.hours} hour{shift.hours > 1 && "s"} / {shift.shift}
+                    </span>
+                  ))}
+                </p>
               </div>
               <div className="grid grid-cols-2">
                 <div className="text text-m font-bold">Summary</div>
-                <p className="text">
-                  Department Department Department Department Department
-                  Department Department : Department Department Department
-                  Department Department Department Department : Department
-                  Department Department Department Department Department
-                  Department :
-                </p>
+                <p className="text">{summary}</p>
               </div>
             </div>
             {/* Action buttons */}

@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "next/link";
 
-const NavLink = ({ label, link = "#" }) => {
+const NavLink = ({ label, link="#" }) => {
   return (
     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
       <Link href={link}>

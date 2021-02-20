@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React, { useState } from 'react'
 import useSWR from "swr";
 
 const FILTERS_API_URL = "/api/filters";
