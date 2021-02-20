@@ -2,7 +2,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import SearchBar from "../components/inputs/search-bar";
 import MaxWidthContainer from "../components/containers/max-width-container"
-import JobsFilters from "../components/complex/jobs-filters"
+import JobsFilters from "../components/jobs-filters"
 import JobsListing from "../components/jobs-listing"
 
 const Index = () => {
@@ -27,7 +27,7 @@ const Index = () => {
         </MaxWidthContainer>
 
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="bottom-0 w-full">
         <Footer />
       </div>
     </div>
