@@ -5,15 +5,13 @@ import Modal from "./modal";
 const CategoryListing = ({ title, categories = [], limitCount = null }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  categories = [...categories];
-
   return (
     <div className="w-full p-3 bg-white font-bold uppercase">
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)} title={title}>
-          <div className="w-full gap-x-4 grid grid-cols-4 max-h-48 max-w-md overflow-auto overflow-x-scroll place-items-auto">
+          <div className="w-full gap-x-4 grid grid-cols-4 max-h-48 min-w-max max-w-2xl overflow-auto overflow-x-auto place-items-auto">
             {categories.map((category, idx) => (
-              <div className="text-md font-normal my-1" key={idx}>
+              <div className="text-md font-normal my-1 min" key={idx}>
                 {category.label}
                 <span className="text-sm px-1 text-gray-400">
                   {category.count.toLocaleString()}

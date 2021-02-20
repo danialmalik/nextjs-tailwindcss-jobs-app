@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import JobsGroup from "./jobs-group";
+
 const UpArrow = () => <>&uarr;</>;
 const DownArrow = () => <>&darr;</>;
 
@@ -87,22 +89,7 @@ const JobsListing = () => {
       {/* Jobs listing */}
       <div>
         {/* Job group entry */}
-        <div className="flex flex-row items-center my-3 cursor-pointer">
-          <div className="rounded-lg bg-gray-400 text-white text-xl tracking-widest py-2 px-1 mr-2">
-            LG
-          </div>
-          <div className="text text-black h-full">
-            8 Jobs for Mammoth Hospital
-          </div>
-
-          {/* Jobs list */}
-          <div>
-            {/* Job Details */}
-            <div>
-
-            </div>
-          </div>
-        </div>
+        <JobsGroup location="Hospital" count={10} />
       </div>
     </div>
   );
