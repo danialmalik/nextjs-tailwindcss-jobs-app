@@ -77,7 +77,7 @@ const useJobs = ({ searchKeyword, sorting }) => {
         return hospitalJobs;
     })
 
-    if (sorting.location !== 0) {
+    if (jobs && sorting.location !== 0) {
         jobs.sort((hJobA, hJobB) => {
             const jobA = hJobA.jobs[0];
             const jobB = hJobB.jobs[0];

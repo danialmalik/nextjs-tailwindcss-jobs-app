@@ -22,7 +22,6 @@ export default async (req, res) => {
           job.job_title,
           job.job_type
         ].some(attribute => {
-          console.error(attribute)
           return attribute.toLowerCase().includes(keyword)
         })
       })
