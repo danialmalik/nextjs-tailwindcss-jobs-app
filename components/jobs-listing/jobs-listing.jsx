@@ -19,8 +19,6 @@ const renderSortOption = ({ label, onSelect, sorting }) => (
 );
 
 const JobsListing = ({ searchKeyword }) => {
-  const { jobs, error } = useJobs({ searchKeyword });
-
   // 1 means asc, -1 means desc, and 0 means no sorting
   const [sorting, setSorting] = useState({
     location: 0,
@@ -29,6 +27,9 @@ const JobsListing = ({ searchKeyword }) => {
     education: 0,
     experience: 0,
   });
+
+  const { jobs, error } = useJobs({ searchKeyword, sorting });
+
 
   const handleSortChange = (key) => {
     const currentOption = sorting[key];
@@ -110,7 +111,7 @@ const JobsListing = ({ searchKeyword }) => {
             {/* Job group entry */}
             {jobs.map((job, idx) => (
               <JobsGroup
-                key={idx}
+                key={job.hospitalName}
                 hospitalName={job.hospitalName}
                 count={job.totalJobsCount}
                 jobs={job.jobs}
