@@ -2,6 +2,8 @@
 
 ## Developer Nodes
 
+**Deployment link:** https://vercel.com/danialmalik1/nextjs-tailwindcss-jobs-app
+
 ### Installation
 
 1. Install dependencies:
