@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full border-2 md:border-0">
       <input
         type="text"
         className="h-14 w-full pr-8 pl-5 rounded z-0 focus:shadow focus:outline-none"

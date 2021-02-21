@@ -21,31 +21,31 @@ const JobEntry = ({
   return (
     <>
       <div
-        className="border-solid border-t w-full flex flex-row items-center cursor-pointer"
+        className="border-solid border-t w-full flex flex-col md:flex-row items-center cursor-pointer"
         onClick={() => setShowDetails(!showDetails)}
       >
-        <div className="my-4 flex-col w-full">
+        <div className="mt-2 md:mt-0 md:my-4 flex-col w-full">
           <div className="text text-m font-bold">{title}</div>
           <div className="text">
             {jobType} | ${salaryRange.start} - ${salaryRange.end} an hour |{" "}
             {address.city}
           </div>
         </div>
-        <div className="w-full text-right text">
+        <div className="w-full text-left text">
           {moment(createdAt).fromNow()}
         </div>
       </div>
       {/* Job Details */}
       {showDetails && (
         <div>
-          <div className="grid grid-cols-4 mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-4 mb-5">
             {/* Job description */}
-            <div className="flex flex-col col-span-3 gap-5">
-              <div className="grid grid-cols-2">
+            <div className="flex flex-col md:col-span-3 md:gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-3 md:mt-0">
                 <div className="text text-m font-bold">Department:</div>
                 <p className="text">{departments.join(", ")}</p>
               </div>
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-3 md:mt-0">
                 <div className="text text-m font-bold">Hours / shifts:</div>
                 <p className="text">
                   {shifts.map((shift, idx) => (
@@ -55,13 +55,13 @@ const JobEntry = ({
                   ))}
                 </p>
               </div>
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-3 md:mt-0">
                 <div className="text text-m font-bold">Summary</div>
                 <p className="text">{summary}</p>
               </div>
             </div>
             {/* Action buttons */}
-            <div className="w-full flex flex-col items-end justify-center gap-3">
+            <div className="w-full flex flex-row md:flex-col items-end justify-start md:justify-center gap-3 mt-3 md:mt-0">
               <PrimaryButton label="Job Details" />
               <SecondaryButton label="Save Job" />
             </div>

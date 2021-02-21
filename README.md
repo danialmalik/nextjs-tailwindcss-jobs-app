@@ -1,5 +1,23 @@
 # fullstack-candidate-testing
 
+## Developer Nodes
+
+### Installation
+
+1. Install dependencies:
+
+```
+npm i
+```
+
+2. Run in dev mode:
+
+```
+npm run dev
+```
+
+Site will be running on http://localhost:3000
+
 ## Instructions
 
 

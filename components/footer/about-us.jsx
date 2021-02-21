@@ -8,7 +8,7 @@ const AboutUs = () => {
                 to help nurses find jobs that they love
             </div>
             <div className="my-2">
-                All copy rights reserved  TODO: symbol
+                All copy rights reserved &copy; 2020 - Health Explore
             </div>
         </div>
     );

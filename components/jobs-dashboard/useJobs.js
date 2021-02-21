@@ -24,7 +24,7 @@ const useJobs = ({ searchKeyword, sorting }) => {
         jobs: hospitalData.items.map(jobData => ({
             id: jobData.job_id,
             title: jobData.job_title,
-            type: jobData.job_type,
+            jobType: jobData.job_type,
             salaryRange: {
                 start: jobData.salary_range[0],
                 end: jobData.salary_range[1],

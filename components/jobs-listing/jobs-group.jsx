@@ -20,7 +20,7 @@ const JobsGroup = ({ count, hospitalName, jobs = [] }) => {
       </div>
       {/* Jobs list */}
       {isListingOpen &&
-        jobs.map((job, idx) => <JobEntry key={job.id} job={job} />)}
+        jobs.map((job) => <JobEntry key={job.id} job={job} />)}
     </div>
   );
 };

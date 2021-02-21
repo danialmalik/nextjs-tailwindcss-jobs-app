@@ -7,7 +7,7 @@ import Privacy from "./privacy";
 
 const Footer = () => {
   return (
-    <footer className="bg-white w-full">
+    <footer className="bg-white w-full border-t-2 md:border-0 px-4 md:px-0">
       <MaxWidthContainer>
         <div className="grid grid-cols-1 sm:grid-cols-2 mg-auto w-full py-3">
           <div className="pr-4">

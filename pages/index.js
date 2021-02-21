@@ -10,7 +10,10 @@ const Index = () => {
       <Navbar />
       <div >
         <MaxWidthContainer>
-          <JobsDashboard />
+          <div className="w-full p-0 md:p-4">
+            <JobsDashboard />
+
+          </div>
         </MaxWidthContainer>
 
       </div>
